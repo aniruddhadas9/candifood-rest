@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="baseLayout" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Base templates"/>
+      <put-attribute name="leftMenu"   value="/left_menu_main.jsp"/>
+      <put-attribute name="body"   value="/login.jsp"/>
+  </definition>
+  
+  <definition name="dashboard" extends="baseLayout">
+      <put-attribute name="title"  value="Welcome to candifood"/>
+      <put-attribute name="body"   value="/add_restaurant.jsp"/>
+  </definition>
+  
+  <definition name="restaurant_add" extends="baseLayout">
+      <put-attribute name="title"  value="Add you restaurants to the site"/>
+      <put-attribute name="body"   value="/add_restaurant.jsp"/>      
+  </definition>
+  
+  <definition name="add_menu" extends="baseLayout">
+      <put-attribute name="title"  value="add menu to your restaurant"/>
+      <put-attribute name="body"   value="/office.jsp"/>  
+  </definition>
+  
+</tiles-definitions>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<package name="restaurant" namespace="/restaurant" extends="struts-default">
+	    
+		<!-- <result-types>
+		  <result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult"/>
+		</result-types> -->
+		
+		<action name="dashboard" class="com.candi.actions.Restaurant" method="dashboard">
+			<result name="success">dashboard.jsp</result>
+		</action>
+		
+		<action name="add" class="com.candi.actions.Restaurant" method="add">
+			<result name="success">restaurant_add</result>
+			<result name="filure">add_restaurant.jsp</result>
+			<result name="input">restaurant_add</result>
+		</action>
+		
+	</package>
+
+
+</struts>
