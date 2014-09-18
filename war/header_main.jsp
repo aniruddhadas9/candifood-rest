@@ -5,8 +5,8 @@
 	<head>
 		<title>candifood</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="making map points from dremel data" />
-		<meta name="keywords" content="map points from dremel" />
+		<meta name="description" content="candifood, online food services, online food delivery" />
+		<meta name="keywords" content="candifood, online food services, online food delivery, order food online, restaurant, near by restaurants" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Open+Sans+Condensed:300,700" rel="stylesheet" />
 		<script src="js/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>

@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC
-"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-"http://struts.apache.org/dtds/struts-2.0.dtd">
-
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-    
 	<constant name="struts.convention.action.mapAllMatches" value="true"/>
 	<constant name="struts.convention.package.locators" value="webservice"/>
 	<constant name="struts.convention.action.suffix" value="Controller"/>
@@ -16,28 +14,7 @@
 	<constant name="struts.action.excludePattern" value="/_ah/admin" />
 	<constant name="struts.action.excludePattern" value="/_ah/*"/>
 	
-	<package name="default" namespace="/" extends="struts-default">
-
-		<action name="dashboard" class="com.candi.actions.Dashboard" method="dashboard">
-			<result name="success">dashboard.jsp</result>
-		</action>
-		
-		<action name="login" class="com.candi.actions.Login" method="execute">
-		    <result name="input">googleJogin.jsp</result>
-			<result name="success">login.jsp</result>
-		</action>
-
-		<action name="" class="com.candi.actions.Dashboard" method="noAction">
-			<result name="success">index.jsp</result>
-		</action>
-		
-		<!-- <action name="*">
-			<result type="redirectAction">
-				<param name="actionName">Home.action</param>
-			</result>
-		</action> -->
-	</package>
-
-	<include file="restaurant.xml"></include>
-
+	<include file="users.xml"/>
+    <include file="restaurant.xml"/>
+    
 </struts>

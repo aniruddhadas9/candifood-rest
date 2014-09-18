@@ -16,11 +16,17 @@
 		</action>
 		
 		<action name="add" class="com.candi.actions.Restaurant" method="add">
-			<result name="success">restaurant_add</result>
+			<result name="success">add_restaurant.jsp</result>
 			<result name="filure">add_restaurant.jsp</result>
 			<result name="input">restaurant_add</result>
 		</action>
 		
+		<action name="addEmp" class="com.candi.actions.Restaurant" method="addEmployee">
+			<result name="success">add_restaurant.jsp</result>
+			<result name="filure">add_restaurant.jsp</result>
+			<result name="input">restaurant_add</result>
+		</action>
+				
 	</package>
 
 

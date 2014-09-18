@@ -1,6 +1,13 @@
 package com.candi.actions;
 
+import java.util.Date;
 import java.util.logging.Logger;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import com.candi.jpa.Employee;
+import com.candi.listeners.EMF;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +29,10 @@ public class Restaurant extends ActionSupport implements ServletRequestAware, Se
 	HttpServletResponse resp = ServletActionContext.getResponse();
 	
 	UserBean user = new UserBean();
+	
+	EntityManager em = EMF.get().createEntityManager();
+	
+	
 	
 	public String dashboard() {
 		log.info("I am int he Restaurant->dashboard");
@@ -76,6 +87,24 @@ public class Restaurant extends ActionSupport implements ServletRequestAware, Se
 		
 		this.setUser(this.user);
 
+		return SUCCESS;
+	}
+	
+	public String addEmployee(){
+		log.info("I am int he Restaurant->addEmployee");
+		Employee emp = new Employee();
+		emp.setFirstName("Candi food");
+		emp.setLastName("Restaurnat");
+		emp.setHireDate(new Date());
+		
+		try {
+			em.persist(emp);
+			//em.flush();
+			log.info("Restaurant->addEmployee: added to the database");
+	    } finally {
+	        em.close();
+	    }
+		
 		return SUCCESS;
 	}
 
